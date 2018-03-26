@@ -51,3 +51,10 @@ h2 {
 .status-live {
     color: red;
 }
+#streamers {
+    margin-bottom: 30px;
+}
+#refreshed {
+    color: #969696;
+    text-align: right;
+}

@@ -9,6 +9,7 @@ Generates a HTML list of Twitch streamers and their online status.
 3. Paste the application Client ID in `config.ini`
 4. Enter the list of streamers in `streamers.txt`
 5. Run the page generator like `python3 generate.py config/ page.html`
+6. Add `favicon.ico` and `favicon.png` in `static/img`
 
 ## License
 

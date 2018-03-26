@@ -3,6 +3,7 @@ import random
 import sys
 import os.path
 import configparser
+import datetime
 
 import requests
 import jinja2
@@ -72,6 +73,8 @@ users_list.sort(
     reverse=True,
     key=lambda u: u.get("stream", {}).get("viewer_count", -1))
 
+timestamp = datetime.datetime.now()
+
 env = jinja2.Environment(
     loader=jinja2.FileSystemLoader("."),
     autoescape=True,
@@ -80,6 +83,7 @@ env = jinja2.Environment(
     keep_trailing_newline=True
 )
 template = env.get_template("template.html")
-page = template.render(site_name=site_name, streamers=users_list)
+page = template.render(
+    site_name=site_name, streamers=users_list, timestamp=timestamp)
 with open(output_path, "w") as page_file:
     page_file.write(page)

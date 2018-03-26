@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8"/>
     <title>{{ site_name }}</title>
+    <link rel="icon" type="image/png" href="static/img/favicon.png" sizes="32x32">
     <link rel="stylesheet" href="static/fonts/lato.css">
     <link rel="stylesheet" href="static/css/index.css">
   </head>
 
   <body>
     <h1>{{ site_name }}</h1>
-    <div id="team">
+    <div id="streamers">
       {% for user in streamers %}
       <a class="streamer" href="https://twitch.tv/{{ user.login }}">
         <img class="icon" src="{{ user.profile_image_url }}">
@@ -26,6 +27,9 @@
         {% endif %}
       </a>
       {% endfor %}
+    </div>
+    <div id="refreshed">
+      Last updated: {{ timestamp.strftime("%Y-%m-%d %H:%M:%S") }} CET
     </div>
   </body>
 </html>
