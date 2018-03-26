@@ -1,0 +1,53 @@
+body {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #36393E;
+    color: white;
+    font-family: Lato, sans-serif;
+}
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+h2 {
+    font-size: 40px;
+    text-align: center;
+}
+.streamer {
+    display: flex;
+    background-color: #44464B;
+    box-shadow: 0 0 4px #2F3135;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: inherit;
+}
+.icon {
+    width: 100px;
+    height: 100px;
+}
+.description {
+    display: inline-flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px;
+}
+.name {
+    font-size: 35px;
+}
+.game {
+    font-size: 27px;
+}
+.status {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 40px;
+    padding: 20px;
+}
+.status-icon {
+    margin: 0 5px;
+}
+.status-live {
+    color: red;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>{{ site_name }}</title>
+    <link rel="stylesheet" href="static/fonts/lato.css">
+    <link rel="stylesheet" href="static/css/index.css">
+  </head>
+
+  <body>
+    <h1>{{ site_name }}</h1>
+    <div id="team">
+      {% for user in streamers %}
+      <a class="streamer" href="https://twitch.tv/{{ user.login }}">
+        <img class="icon" src="{{ user.profile_image_url }}">
+        <div class="description">
+          <div class="name">{{ user.display_name }}</div>
+          {% if user.stream %}
+          <div class="game">{{ user.stream.game.name }}</div>
+          {% endif %}
+        </div>
+        {% if user.stream %}
+        <div class="status">
+          <span class="status-icon status-live">●</span> {{ user.stream.viewer_count }}
+        </div>
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
+  </body>
+</html>
