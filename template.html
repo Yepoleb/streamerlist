@@ -12,7 +12,7 @@
     <h1>{{ site_name }}</h1>
     <div id="streamers">
       {% for user in streamers %}
-      <a class="streamer" href="https://twitch.tv/{{ user.login }}">
+      <a class="streamer" target="_blank" href="https://twitch.tv/{{ user.login }}">
         <img class="icon" src="{{ user.profile_image_url }}">
         <div class="description">
           <div class="name">{{ user.display_name }}</div>
