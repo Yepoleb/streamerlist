@@ -16,7 +16,7 @@
         <img class="icon" src="{{ user.profile_image_url }}">
         <div class="description">
           <div class="name">{{ user.display_name }}</div>
-          {% if user.stream %}
+          {% if user.stream and user.stream.game %}
           <div class="game">{{ user.stream.game.name }}</div>
           {% endif %}
         </div>

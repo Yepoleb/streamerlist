@@ -65,7 +65,8 @@ if game_ids:
         print(games_result)
         exit(1)
     for stream in streams:
-        stream["game"] = games[stream["game_id"]]
+        if stream["game_id"] != "0":
+            stream["game"] = games[stream["game_id"]]
 
 users_list = list(users.values())
 random.shuffle(users_list)
